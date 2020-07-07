@@ -15,9 +15,25 @@
 				<div class="instructionText">Enter number of disks</div>
 				<input  class="textField" type="text"  id = 'input' placeholder = 'N'>
 				<button class="button okButton" id = "btnOk" >Ok</button>	
-				<div class="buttonHolder"><button class="buttonDisable startButton" id = "btnStart" disabled>Start</button><button class="buttonDisable nextButton" id = "btnNext" disabled>Next</button></div>
+				<div class="buttonHolder">
+				<button class="button startButton" id = "btnStart" onclick = "verify()">Start</button>
+				<button class="buttonDisable nextButton" id = "btnNext" disabled>Next</button></div>
 			</div><!-- end of inputDivisionBody -->
 		</div><!-- end of inputDivision -->
+		
+<script>
+function verify(){
+var num = document.getElementById("input").value;
+if(num < 0 || num > 10){
+alert("Invalid Input.(The range of input is [0,10])");
+}
+}
+</script>
+
+
+
+
+
 
 		<div class="executionDivision">
 			<div class="executionDivisionTitle"><div class="executionPic"></div><div class="executionText">Step Execution</div></div>
