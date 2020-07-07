@@ -23,20 +23,49 @@
                 <option value="do-while" id = 'optionDoWhile'>do-while</option>
             </select>
         	<div class = 'instructionText' >Enter number for calculating P!</div>
+
 			<input  class = 'inputField marginBottom' type = 'text'   id = "simpleLoopInput">
-			<button class = 'button startButton' id = "btnStart" >Start</button>
+			<button class = 'button startButton' id = "btnStart" onclick = "verify1()" >Start</button>
 			<button class = 'buttonDisable nextButton' id = "btnNext" disabled>Next</button>
 			<button class = 'button switchButton marginTop' id = "btnNestedLoop" >Switch to Nested Loop</button>
+
 		</div><!-- end of arraySizeInputBlock -->
+
+
+
 		<div class = 'nestedLoopBlock' id = "nested" style = "display: none">
 			<div class = 'instructionText' >Enter height of pyramid </div>
 			<input  class = 'inputField marginBottom' type = 'text'  id = "nestedLoopInput">
-			<button class = 'button startButton' id = 'nestedStartBtn' >Start</button>
+			<button class = 'button startButton' id = 'nestedStartBtn' onclick = "verify2()" >Start</button>
 			<button class = 'buttonDisable nextButton' id = 'nestedNextBtn' disabled>Next</button>
 			<button class = 'button switchButton marginTop' id = 'btnSimpleLoop' >Switch to Simple Loop</button>
 		</div><!-- end of arraySizeInputBlock -->
 	</div><!-- end of inputDivisionBody -->
 </div><!-- end of inputDivision -->
+
+
+
+<script>
+function verify1(){
+var inputValue = document.getElementById('simpleLoopInput').value;
+if (inputValue < 0 || inputValue > 20) {
+      alert("Invalid Input.(Range of input is [0,20])");
+      
+}
+}
+
+function verify2(){
+var inputValue1 = document.getElementById('nestedLoopInput').value;
+if (inputValue1 < 0 || inputValue1 > 20) {
+      alert("Invalid Input.(Range of input is [0,20])");
+      
+}
+}
+
+</script>
+
+
+
 <div class = 'executionDivision' >
 	<div class = 'executionDivisionTitle' ><div class = 'executionPic' ></div><div class = 'executionText' >Step Execution</div></div>
 	<div class = 'stepExecutionDisplay' >
